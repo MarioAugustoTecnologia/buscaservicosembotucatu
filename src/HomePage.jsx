@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import React from "react";
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -23,13 +24,18 @@ const HomePage = () => {
     console.log(numeroWhatsApp)
     const url = `whatsapp://send?phone=${numeroWhatsApp}&text=${encodeURIComponent(mensagem)}`;
     window.open(url); 
-  };
-
-
+  };  
 
   return (
 
     <div className="container-fluid">
+         <Helmet>
+             <title>serviços em Botucatu | Serviços em Botucatu</title>
+             <meta name="description" content="busqueservicosembotucatu" />
+             <meta property="og:title" content="serviços em Botucatu | Serviços em Botucatu" />
+             <meta property="og:image" content="buscaservicosembotucatu.onrender.com" />
+             <link rel="canonical" href="buscaservicosembotucatu.onrender.com" />
+          </Helmet>
       <div className="row flex-nowrap">
         <div className="main-wrapper">
 
