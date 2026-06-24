@@ -14,6 +14,7 @@ import Mecanica from './Mecanica';
 import Seguranca from './Seguranca';
 import RestauraPisos from './RestauraPisos';
 import { HelmetProvider } from 'react-helmet-async';
+import EsteticaAutomotiva from './EsteticaAutomotiva';
 
 
 const App = () => {
@@ -36,6 +37,7 @@ const App = () => {
                         <Route path='/mecanica' element={<Mecanica />}></Route>
                         <Route path='/segeletronica' element={<Seguranca />}></Route>
                         <Route path='/restaurapisos' element={<RestauraPisos />}></Route>
+                        <Route path='/esteticaautomotiva' element={<EsteticaAutomotiva />}></Route>
                     </Routes>
                 </BrowserRouter>
             </div>

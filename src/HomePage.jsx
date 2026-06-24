@@ -129,6 +129,17 @@ const HomePage = () => {
               </li>
               <li className="w-100" style={{ fontSize: '18px' }}>
                 <Link
+                  to="/esteticaautomotiva"
+                  className="nav-link px-0 align-middle text-white"
+                >
+                  <i class="bi bi-car-front ms-2"></i>
+                  <span className="ms-2 d-sm-inline">
+                    Estética-Automotiva:
+                  </span>
+                </Link>
+              </li>
+              <li className="w-100" style={{ fontSize: '18px' }}>
+                <Link
                   className="nav-link px-0 align-middle text-white"
                 >
                   <i class="bi bi-pc-display ms-2"></i>
