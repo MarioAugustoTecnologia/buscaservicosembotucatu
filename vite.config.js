@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [
     react(),
     ViteSitemap({
-      hostname: 'https://buscaservicosembotucatu.onrender.com',
+      hostname: 'https://buscaservicosembotucatu.onrender.com/',
     }),
   ],
 })
