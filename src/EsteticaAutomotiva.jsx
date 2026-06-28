@@ -1,8 +1,36 @@
 import React from 'react'
 
 const EsteticaAutomotiva = () => {
+
+  const handleInstagramClick = () => {
+
+
+    const url = `https://instagram.com/4R_ESTETICA_AUTOMOTIVA`;
+    window.open(url); // Abre em uma nova aba
+  };
+
+  const handleWhatsAppClick = () => {
+
+    var fone = document.getElementById('fone').textContent;
+    console.log(fone)
+
+    function limparTelefone(telefone) {
+      return telefone.replace(/[\s()]/g, '');
+    }
+
+    // Exemplo de uso:
+    var resultado = limparTelefone(fone);
+    console.log(resultado); // "14998216619"
+
+    const numeroWhatsApp = "55" + resultado;
+    const mensagem = 'Olá! Gostaria de mais informações ?';
+    console.log(numeroWhatsApp)
+    const url = `whatsapp://send?phone=${numeroWhatsApp}&text=${encodeURIComponent(mensagem)}`;
+    window.open(url); // Abre em uma nova aba
+  };
+
   return (
-     <div className="container-fluid">
+    <div className="container-fluid">
       <div className="row flex-nowrap">
         <div className="main-wrapper">
 
@@ -25,19 +53,19 @@ const EsteticaAutomotiva = () => {
             <br />
             <center><h4>4R Estetica Automotiva</h4></center>
             <div className='d-flex' style={{ margin: '0 172px' }}>
-               <i class="bi bi-car-front ms-2 fs-2"></i>
+              <i class="bi bi-car-front ms-2 fs-2"></i>
             </div>  <br />
-            <p style={{color:'white'}}> - Lavagem Detalhada </p>
-            <p style={{color:'white'}} >- Lavagem Simples</p>
-            <p style={{color:'white'}}> - Higienização Interna</p>
-            <p style={{color:'white'}}> - Polimento Tecnico </p>
-            <p style={{color:'white'}}> - Cristalização </p>
-            <p style={{color:'white'}}> - Lavagem de Motor </p>
-            <p style={{color:'white'}}> - Restauração de Faróis </p>
+            <p style={{ color: 'white' }}> - Lavagem Detalhada </p>
+            <p style={{ color: 'white' }} >- Lavagem Simples</p>
+            <p style={{ color: 'white' }}> - Higienização Interna</p>
+            <p style={{ color: 'white' }}> - Polimento Tecnico </p>
+            <p style={{ color: 'white' }}> - Cristalização </p>
+            <p style={{ color: 'white' }}> - Lavagem de Motor </p>
+            <p style={{ color: 'white' }}> - Restauração de Faróis </p>
             <br />
-            <div className='d-flex' style={{color:'white'}}>
-                <p id='fone' style={{ cursor: 'pointer' }}><i class="bi bi-whatsapp fs-5 ms-2" style={{ color: 'lime' }}></i>      (14) 997698593 </p>
-                <label style={{ cursor: 'pointer' }} htmlFor=""><i class="bi bi-instagram ms-2 fs-5" style={{ color: 'DeepPink' }} ></i> 4R_ESTETICA_AUTOMOTIVA </label>
+            <div className='d-flex' style={{ color: 'white' }}>
+              <p id='fone' style={{ cursor: 'pointer' }} onClick={handleWhatsAppClick}><i class="bi bi-whatsapp fs-5 ms-2" style={{ color: 'lime' }}></i>      (14) 997698593 </p>
+              <label style={{ cursor: 'pointer' }} onClick={handleInstagramClick}><i class="bi bi-instagram ms-2 fs-5" style={{ color: 'DeepPink' }} ></i> 4R_ESTETICA_AUTOMOTIVA </label>
             </div>
 
           </div>
