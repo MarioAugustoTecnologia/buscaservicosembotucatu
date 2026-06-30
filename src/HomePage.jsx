@@ -30,9 +30,9 @@ const HomePage = () => {
 
     <div className="container-fluid">
          <Helmet>
-             <title>serviços em Botucatu | Serviços em Botucatu</title>
+             <title>buscaservicosembotucatu</title>
              <meta name="description" content="Encontre serviços em Botucatu" />
-             <meta property="og:title" content="serviços em Botucatu | Serviços em Botucatu" />
+             <meta property="og:title" content="buscaservicosembotucatu" />
              <meta property="og:image" content="" />
              <link rel="canonical" href="https://buscaservicosembotucatu.onrender.com" />
           </Helmet>
